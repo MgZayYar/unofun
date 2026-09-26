@@ -11,7 +11,21 @@ AI voice-over in 21 languages with perfectly timed audio, in minutes.
 - 📊 **Live progress** — stage-aware progress (transcribing → translating → synthesizing → mixing)
 - 🐳 **Docker Compose** — api + worker + web
 
-## Quick start (local dev)
+## Quick start (Windows — easiest)
+
+1. Install [Python 3.12](https://www.python.org/downloads/) (tick **"Add python.exe to PATH"**),
+   [Node.js 20 LTS](https://nodejs.org/), and
+   [ffmpeg](https://www.gyan.dev/ffmpeg/builds/) (extract, add its `bin` folder to PATH).
+2. In `C:\`, run: `git clone https://github.com/MgZayYar/unofun.git`
+3. Open the `unofun` folder in VS Code, right-click **`setup.ps1`** → **Run with PowerShell**.
+   It checks the prerequisites, installs everything, and builds the database automatically.
+4. Edit `.env` — set `JWT_SECRET_KEY` (any long random string) and `OPENAI_API_KEY`.
+5. Right-click **`start.ps1`** → **Run with PowerShell**. Open http://localhost:3000.
+
+> If PowerShell blocks the script, run once:
+> `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+
+## Quick start (manual)
 
 **Backend**
 
